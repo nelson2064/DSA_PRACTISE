@@ -184,8 +184,45 @@ public class LinkedList{
                 curr = next;
             }
 
-           head = prev;
+                head = prev;
         }
+
+
+        public static int deleteNthNodeFromEnd(int n){
+
+            int size = 0;
+            Node temp = head;
+            while(temp != null){
+                temp = temp.next;
+                size++;
+            }
+
+            if(n == size){
+                int data = head.data;
+                head = head.next;
+                size--;
+                return data;
+            }
+
+            int nn = size - n +1;
+            int prev = nn-1;
+            int i = 1;
+            Node tempp = head;
+            
+            while(i<prev){
+
+                tempp = tempp.next;
+                i++;
+
+            }
+
+            int data = tempp.next.data;
+            tempp.next = tempp.next.next;
+            size--;
+            return data;
+        }
+
+        
     }
 
     public static void main(String[] args) {
