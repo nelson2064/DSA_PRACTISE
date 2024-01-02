@@ -35,7 +35,7 @@ public class PairSumone {
 
  
  public static boolean pairSum2(ArrayList<Integer> list, int target) {
-    int bp = -1;
+     int bp = -1;
     int n = list.size();
     for(int i=0; i<list.size(); i++) {
         if(list.get(i) > list.get(i+1)) { //breaking point
@@ -74,5 +74,7 @@ public class PairSumone {
         int target = 5;
 
         System.out.println(findSum1(list, target));
+        // System.out.println(findSum1(list, target));
+
 }    
 }
