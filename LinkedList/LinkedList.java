@@ -55,6 +55,98 @@ public class LinkedList{
             System.out.print("null");
         }
 
+
+        public static void add(int idx , int data){
+            if(idx == 0){
+                addFirst(data);
+                return;
+            }
+
+            Node newNode = new Node(data);
+            size++;
+
+            Node temp = head;
+            int i = 0;
+
+            while(i < idx-1){
+                temp = temp.next;
+                i++;
+            }
+
+            newNode.next = temp.next;
+            temp.next = newNode;
+
+        }
+
+
+
+        public static int removeFirst(int data){
+            if(size == 0){
+                return -1;
+            }else if(size == 1){
+                int temp = head.data;
+                head = tail = null;
+                size = 0;
+                return temp;
+            }
+
+            int val = head.data;
+            head = head.next;
+            size--;
+            return val;
+        }
+
+
+        public static int removeLast(int data){
+            if(size == 0){
+                return -1;
+            }else if(size == 1){
+                int temp = head.data;
+                head = tail = null;
+                size = 0;
+                return temp;
+
+            }
+
+            int idx = size-1;
+            Node temp = head;
+            int i = 0;
+
+            while(i < idx-1){
+                temp = temp.next;
+                i++;
+            }
+
+            int te = temp.next.data;
+            tail = temp;
+            size--;
+            return te;
+        }
+
+
+
+        public int itrSearch(int data){
+            
+            Node temp = head;
+            int i = 0;
+
+
+            while(temp != null){
+                if(temp.data == data){
+                    return i;
+                }else{
+                    i++;
+                    temp = head.next;
+                }
+                
+            }
+
+            return -1;
+        }
+
+
+
+
     }
 
     public static void main(String[] args) {
