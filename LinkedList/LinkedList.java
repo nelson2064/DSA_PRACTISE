@@ -145,7 +145,30 @@ public class LinkedList{
         }
 
 
+        public static int helper(int data , Node head){
+            
+            if(head == null){
+                return -1;
+            }
 
+            if(head.data == data){
+                return 0;
+            }
+
+            int idx = helper(data, head.next);
+
+            if(idx == -1){
+                return -1;
+            }
+
+            if(idx != -1){
+                return idx+1;
+            }
+        }
+
+        public static int recSearch(int data){
+            return helper(data , head);
+        }
 
     }
 
