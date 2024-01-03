@@ -30,5 +30,15 @@ public class linkStack {
             return head == null;
         }
 
+        public static int pop() {
+            if(isEmpty()) {
+                return -1;
+            }
+            Node top = head;
+            head = head.next;
+            return top.data;
+        }
+ 
+       
     }
 }
