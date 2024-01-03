@@ -39,6 +39,14 @@ public class linkStack {
             return top.data;
         }
  
-       
+        public static int peek() {
+            if(isEmpty()) {
+                return -1;
+            }
+            Node top = head;
+            return top.data;
+        }
     }
+
+   
 }
