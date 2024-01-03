@@ -19,12 +19,18 @@ public class arrStack {
 
         // pop
         public int pop() {
+            if (isEmpty()) {
+                return -1;
+            }
             int top = list.get(list.size() - 1);
             list.remove(list.size() - 1);
             return top;
         }
 
         public int peek() {
+            if (isEmpty()) {
+                return -1;
+            }
             return list.get(list.size() - 1);
         }
     }
