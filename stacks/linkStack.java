@@ -26,6 +26,9 @@ public class linkStack {
             head = newNode;
         }
 
-       
+        public static boolean isEmpty() {
+            return head == null;
+        }
+
     }
 }
