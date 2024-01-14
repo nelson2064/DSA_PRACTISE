@@ -2,7 +2,7 @@ package Queues;
 import java.util.*;
 public class ArrayQueues {
    
-   
+   //time complexity to implement queue using array is not good while removing the element
     static class Queue{
 
     static int arr[];
