@@ -52,7 +52,7 @@ public class QueueUsingLinkedList {
                 return -1;
             }
 
-            return head.data;
+            return head.data;s
         }
 
     }
